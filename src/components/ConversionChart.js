@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import parserConversion from '../helper/parserConversion'
 
 const ConversionChart = props => {
-  const [data, setData] = useState(parserConversion(props.data))
+  const [data] = useState(parserConversion(props.data))
 
   let options = {
     chart: {

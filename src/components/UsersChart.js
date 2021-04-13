@@ -5,7 +5,7 @@ import parserUserCategory from '../helper/parserUserCategory'
 require('highcharts/modules/variable-pie')(Highcharts)
 
 const UsersChart = props => {
-  const [data, setData] = useState(parserUserCategory(props.data))
+  const [data] = useState(parserUserCategory(props.data))
 
   let options = {
     chart: {

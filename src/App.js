@@ -5,6 +5,7 @@ import { Button, Card, Col, Row } from 'react-bootstrap';
 import './App.scss';
 import ConversionChart from './components/ConversionChart';
 import DotMenu from './components/DotMenu';
+import LoadingScreen from './components/LoadingScreen';
 import OrderContainer from './components/OrderContainer';
 import RevenueChart from './components/RevenueChart';
 import TopMenu from './components/TopMenu';
@@ -24,7 +25,7 @@ function App() {
   }, [])
 
   return (
-    loading ? (<h1>loading</h1>) : (
+    loading ? (<LoadingScreen />) : (
       <div className="App">
         <TopMenu />
         <div className='mycontainer'>

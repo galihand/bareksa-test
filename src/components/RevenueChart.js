@@ -5,7 +5,7 @@ import parserRevenue from '../helper/parserRevenue';
 
 
 const RevenueChart = props => {
-  const [data, setData] = useState(parserRevenue(props.data))
+  const [data] = useState(parserRevenue(props.data))
 
   const options = {
     chart: {
