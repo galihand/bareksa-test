@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { format } from 'date-fns';
 import { useEffect, useState } from 'react';
 import { Button, Card, Col, Row } from 'react-bootstrap';
 import './App.scss';
@@ -55,7 +56,9 @@ function App() {
                 <Card.Body>
                   <div className='d-flex justify-content-between align-items-center mb-3'>
                     <h3 className='card__title'>Revenue</h3>
-                    <Button variant='outline-secondary' size='sm'>{`new Date()`}</Button>
+                    <Button variant='outline-secondary' size='sm' disabled>
+                      {`${format(new Date(data.orders[0].start_date), 'dd/MM/yy')} - ${format(new Date(data.orders[data.orders.length - 1].start_date), 'dd/MM/yy')}`}
+                    </Button>
                   </div>
                   <RevenueChart data={data.orders} />
                 </Card.Body>
